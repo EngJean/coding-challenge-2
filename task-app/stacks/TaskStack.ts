@@ -11,7 +11,9 @@ export function TaskStack({ stack }: StackContext) {
       amount_components: "string", 
     },
     primaryIndex: { partitionKey: "id" },
-    globalIndexes: { "User Index": { partitionKey: "Username" }, },
+    /*globalIndexes: { "User Index": { partitionKey: "Username" }, }, 
+    CAUSED ERROR, ERROR MESSAGE:
+    Value 'User Index' at 'globalSecondaryIndexes.1.member.indexName' failed to satisfy constraint: Member must satisfy regular expression pattern: [a-zA-Z0-9_.-]+  */
     stream: true,
   });
 
